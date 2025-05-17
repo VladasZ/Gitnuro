@@ -33,8 +33,7 @@ jobs:
           body: "Beta release"
           prerelease: true
           draft: true
-          repository: JetpackDuba/Gitnuro
-          with:
+          repository: VladasZ/Gitnuro
           files: |
             build/libs/Gitnuro-linux-x86_64-*.jar
             build/libs/Gitnuro-linux-x86_64-*.jar.sum
@@ -69,12 +68,11 @@ jobs:
           body: "Beta release"
           prerelease: true
           draft: true
-          repository: JetpackDuba/Gitnuro
-          with:
+          repository: VladasZ/Gitnuro
           files: |
             build/libs/Gitnuro-linux-arm_aarch64-*.jar
             build/libs/Gitnuro-linux-arm_aarch64-*.jar.sum
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
   
   build_windows:
     runs-on: windows-latest
@@ -112,13 +110,12 @@ jobs:
           body: "Beta release"
           prerelease: true
           draft: true
-          repository: JetpackDuba/Gitnuro
-          with:
+          repository: VladasZ/Gitnuro
           files: |
             Output/Gitnuro*.exe
             Output/Gitnuro*.sum
             Output/Gitnuro*.zip
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
 
   build_macos:
     runs-on: macos-latest
@@ -153,9 +150,8 @@ jobs:
           body: "Beta release"
           prerelease: true
           draft: true
-          repository: JetpackDuba/Gitnuro
-          with:
+          repository: VladasZ/Gitnuro
           files: |
             Output/Gitnuro*.zip
             Output/Gitnuro*.sum
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
